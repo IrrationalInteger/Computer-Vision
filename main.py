@@ -30,6 +30,8 @@ def CalculateCo_occurrence(image):
 def CalculateContrast(CoOccurence):
    c1=0
    c2=0
+   # Caculate contrast
+
    for i in range(len(CoOccurence)):
       for j in range(len(CoOccurence[0])):
             c1+=CoOccurence[i][j]*abs(i-j)
@@ -37,6 +39,8 @@ def CalculateContrast(CoOccurence):
    return c1/c2
 
 def Gray_scaleTransformation(image,x1,y1,x2,y2):
+   # Apply transformation according to values
+
    for i in range(len(image)):
       for j in range(len(image[0])):
          if(image[i][j]<x1):
